@@ -1,3 +1,6 @@
 #Hola bro
 #Ejercicio uno
-print("hello world")
+
+#Ejercion dos
+Universo=("hola mundo")
+print(Universo)
