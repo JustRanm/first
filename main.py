@@ -67,9 +67,29 @@ i=float(input("Cual es el porcentaje de interes mi rei: "))
 n=float(input("De cuantos años hablamos: "))
 Formula=I*(i/100+1)
 print("Papi usted de va a ganar una buena platica de:",Formula )
-'''
+
 #EJERCICIO 10
 p=int(input("Numero de payasos: "))
 m=int(input("Numero de muñecas: "))
 Calculo=(p*112)+(m*75)
 print("El peso total del paquete es : ",Calculo,"gr")
+
+#Ejercicio 11
+platica=float(input("Cuanta platica va a invertir: "))
+o1= (platica*0.04)
+o2= (platica*0.04*2)
+o3= (platica*0.04*3)
+suma= o1+o2+o3 
+round(suma,2)
+print("En un año usted ganara: ", o1) 
+print("En dos años usted ganaria: ", o2,)
+print( "En tres años estaria recibiendo: " ,o3)
+print("Por lo que al final, usted mi pana estaria ahorrando un total de: ", suma)
+'''
+
+#Ejercicio 12
+
+Panes=int(input("Cuantos panes viejos a vendido hoy: "))
+dia=Panes*3000
+Ndia=(3000*0.4)*Panes
+print("Si fueran frescos le costaria: ", dia, ". Pero como no son del dia le sale el gangaso a: ", Ndia)
