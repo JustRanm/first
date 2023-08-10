@@ -85,7 +85,7 @@ print("En un año usted ganara: ", o1)
 print("En dos años usted ganaria: ", o2,)
 print( "En tres años estaria recibiendo: " ,o3)
 print("Por lo que al final, usted mi pana estaria ahorrando un total de: ", suma)
-'''
+
 
 #Ejercicio 12
 
@@ -93,3 +93,36 @@ Panes=int(input("Cuantos panes viejos a vendido hoy: "))
 dia=Panes*3000
 Ndia=(3000*0.4)*Panes
 print("Si fueran frescos le costaria: ", dia, ". Pero como no son del dia le sale el gangaso a: ", Ndia)
+
+
+#iF
+horas=int(input("Cuantas horas ah laburado: "))
+costo=float(input("Cuanta platica gana por hora: "))
+if horas>47:
+    print((horas*costo*0.1)+(horas*costo),("esto es lo que gana con el bono bro"))
+elif horas>30 and horas<47:
+    print((horas*costo*0.05)+(horas*costo),"Entonces se llevara esta platica")
+
+else :
+    print(horas*costo, "esta platica es la que se gans sin bono")  
+    
+#Ejercicio 1
+N=int(input("Ingrese cualquier entero positivo panita: "))
+ope=N*(N+1)/2
+if ope>20:
+      print(ope,"Esta como grandesito ese numero")
+else:
+    print(ope,"No tan grande, igual recuerda, EL TAMAÑO NO LO ES TODO")
+  '''
+#ejercicio 2
+N=int(input("Introdusca un numero enstero bro: "))
+M=int(input("Vuelva a repetir el paso anterior :3 : "))
+d=N/M
+C=float(N//M)
+R=N%M
+if C<1:
+  print("La division es: ",d," El cociente le daria; ",C," El resto seria: ",R, "Como C es menor a uno. el divisor es mayor al dividiendo " )
+elif C>1:
+  print("La division es: ",d," El cociente le daria; ",C," El resto seria: ",R,"Como C es mayor a 1, el divisor es mayor al dividiendo ")
+elif C==1:
+  print("La division es: ",d," El cociente le daria; ",C," El resto seria: ",R, " Como C es igual a uno, el divisor es igual al dividiendo")
