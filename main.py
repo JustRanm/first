@@ -113,7 +113,7 @@ if ope>20:
       print(ope,"Esta como grandesito ese numero")
 else:
     print(ope,"No tan grande, igual recuerda, EL TAMAÑO NO LO ES TODO")
-  '''
+  
 #ejercicio 2
 N=int(input("Introdusca un numero enstero bro: "))
 M=int(input("Vuelva a repetir el paso anterior :3 : "))
@@ -121,8 +121,38 @@ d=N/M
 C=float(N//M)
 R=N%M
 if C<1:
-  print("La division es: ",d," El cociente le daria; ",C," El resto seria: ",R, "Como C es menor a uno. el divisor es mayor al dividiendo " )
+  print("La division es: ",d," El cociente le daria; ",C," El resto seria: ",R, "  y Como C es menor a uno. el divisor es mayor al dividiendo " )
 elif C>1:
-  print("La division es: ",d," El cociente le daria; ",C," El resto seria: ",R,"Como C es mayor a 1, el divisor es mayor al dividiendo ")
+  print("La division es: ",d," El cociente le daria; ",C," El resto seria: ",R," y Como C es mayor a 1, el divisor es mayor al dividiendo ")
 elif C==1:
-  print("La division es: ",d," El cociente le daria; ",C," El resto seria: ",R, " Como C es igual a uno, el divisor es igual al dividiendo")
+  print("La division es: ",d," El cociente le daria; ",C," El resto seria: ",R, " y Como C es igual a uno, el divisor es igual al dividiendo")
+  
+#Ejercicio 3
+Ci=float(input("Cuanta platica esta dispuesto a dejar que le roben: "))
+I= float(input("A cuanto interes va dejar que le roben: ")) 
+N= int(input("A cuantos año va a poner que le roben: "))
+C= Ci*((I/100)+1)**N
+if C<100000:
+  print("Esta platica se salvo de que se le robaran: ", C , 
+       "Por lo que dejeme decirle socio que no va a ganar ni m: ")
+elif C>100000 and C<1000000:
+  print("Esta platica se salvo de que se le robaran: ", C , "Por lo que dejeme decirle socio que le sale rentable: ")
+elif C>1000000:
+        print("Esta platica se salvo de que se le robaran: ",C, " Por lo          que dejeme decirle socio que fue buena inversion:" )
+
+'''
+#Ejercio 4
+
+P=int(input("Cuantos payasitos va a llevar de contrabando: "))
+M=int(input("Cuantas muñecas va a llevar de contrabando: "))
+O1=(P*112)/1000
+O2=(M*75)/1000
+P=O1+O2
+if P>3000:
+    X=input("¿Desea contrabandiar?: ")
+    if X =="si":
+      print("Se a contrabandiado con exito")
+    if X =="no":
+      print("No se contrabandio")
+else:
+ print("No alcanza para contrbandiar ese peso: ", P)
