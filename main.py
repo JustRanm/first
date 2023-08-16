@@ -140,7 +140,7 @@ elif C>100000 and C<1000000:
 elif C>1000000:
         print("Esta platica se salvo de que se le robaran: ",C, " Por lo          que dejeme decirle socio que fue buena inversion:" )
 
-'''
+
 #Ejercio 4
 
 P=int(input("Cuantos payasitos va a llevar de contrabando: "))
@@ -156,3 +156,21 @@ if P>3000:
       print("No se contrabandio")
 else:
  print("No alcanza para contrbandiar ese peso: ", P)
+ '''
+#Ejercicio 5
+
+C=float(input("Cuanta platita va a poner a trabajar: "))
+I=0
+B1=C*(1+I/100)
+B2=B1*(1+I/100)
+B3=B2*(1+I/100)
+round(B1,2),(B2,2),(B3,2)
+if C>0 and C<1000000:
+    I=2
+    print("Ustede se gano en el año 1: ",B1,"En el año 2:       ",B2,"y ya en el ultimo año gano: ",B3, "Por lo que         dejeme decirle socio, que su merced gano en total: ",       (B1+B2+B3))
+elif C>=1000000 and C<=2000000:
+     I=5
+     print("Usted gano en el año 1: ",B1," En el año 2:         ",B2," y ya en el ultimo año gano: ",B3, " Por lo que       dejeme dcirle socio que su merced gano en total: ",          (B1+B2+B3))
+elif C>2000000:
+  I=7
+  print("Ustede se gano en el año 1: ",B1,"En el año 2:       ",B2,"y ya en el ultimo año gano: ",B3, "Por lo que         dejeme decirle socio, que su merced gano en total: ",       (B1+B2+B3))
