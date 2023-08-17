@@ -133,8 +133,7 @@ I= float(input("A cuanto interes va dejar que le roben: "))
 N= int(input("A cuantos año va a poner que le roben: "))
 C= Ci*((I/100)+1)**N
 if C<100000:
-  print("Esta platica se salvo de que se le robaran: ", C , 
-       "Por lo que dejeme decirle socio que no va a ganar ni m: ")
+  print("Esta platica se salvo de que se le robaran: ", C     ,"Por lo que dejeme decirle socio que no va a ganar         ni m: ")
 elif C>100000 and C<1000000:
   print("Esta platica se salvo de que se le robaran: ", C , "Por lo que dejeme decirle socio que le sale rentable: ")
 elif C>1000000:
@@ -156,21 +155,124 @@ if P>3000:
       print("No se contrabandio")
 else:
  print("No alcanza para contrbandiar ese peso: ", P)
- '''
+ 
 #Ejercicio 5
 
 C=float(input("Cuanta platita va a poner a trabajar: "))
-I=0
-B1=C*(1+I/100)
-B2=B1*(1+I/100)
-B3=B2*(1+I/100)
-round(B1,2),(B2,2),(B3,2)
 if C>0 and C<1000000:
     I=2
-    print("Ustede se gano en el año 1: ",B1,"En el año 2:       ",B2,"y ya en el ultimo año gano: ",B3, "Por lo que         dejeme decirle socio, que su merced gano en total: ",       (B1+B2+B3))
+    B1=C*(1+I/100)
+    B2=B1*(1+I/100)
+    B3=B2*(1+I/100)
+    a=round(B1,2)
+    b=round(B2,2)
+    c=round(B3,2)
+    s=B1+B2+B3
+    print("Ustede se gano en el año 1: ",a,"En el año 2:       ",b,"y ya en el ultimo año gano: ",c, "Por lo que         dejeme decirle socio, que su merced gano en total:         ", round(s,2))
 elif C>=1000000 and C<=2000000:
      I=5
-     print("Usted gano en el año 1: ",B1," En el año 2:         ",B2," y ya en el ultimo año gano: ",B3, " Por lo que       dejeme dcirle socio que su merced gano en total: ",          (B1+B2+B3))
+     B1=C*(1+I/100)
+     B2=B1*(1+I/100)
+     B3=B2*(1+I/100) 
+     a=round(B1,2)
+     b=round(B2,2)
+     c=round(B3,2)
+     s=B1+B2+B3
+     print("Usted gano en el año 1: ", a," En el año 2: ",b," y ya en el ultimo año gano: ",c, " Por lo que dejeme dcirle socio que su merced gano en total: ",round(s,2))
 elif C>2000000:
   I=7
-  print("Ustede se gano en el año 1: ",B1,"En el año 2:       ",B2,"y ya en el ultimo año gano: ",B3, "Por lo que         dejeme decirle socio, que su merced gano en total: ",       (B1+B2+B3))
+  B1=C*(1+I/100)
+  B2=B1*(1+I/100)
+  B3=B2*(1+I/100)
+   a=round(B1,2)
+   b=round(B2,2)
+   c=round(B3,2)
+   s=B1+B2+B3
+  
+  print("Ustede se gano en el año 1: ",a,"En el año 2:       ",b,"y ya en el ultimo año gano: ",c, "Por lo que    dejeme decirle socio, que su merced gano en total: ",       round(s,2))
+  
+  
+
+  #Ejercicio 6
+Panes=int(input("Cuantos panes viejos a vendido hoy: "))
+dia=Panes*3000
+Ndia=(3000*0.4)*Panes
+print("Si fueran frescos le costaria: ", dia, ". Pero como no son del dia le sale el gangaso a: ", Ndia)
+P=int(input("Cuantos paens frescos va comprar mi so: "))
+if P>15:
+    I=40
+    O=3000*(I/100)*P
+    print("Dejeme descirle que al por mayor le sale a: ",O)
+elif P<15 and P>10:
+    I=30
+    O=3000*(I/100)*P
+    print("No son tantos aun asi le sale a un buen precio de: ",O)
+elif P<10:
+    I=10
+    O=3000*(I/100)*P
+    print("Uf no es un gran descuento pero es mejor que   nada, los pancitos le salen: ",O)
+  
+
+#Ejercicios de ffunciones
+#Ejercico 1
+a=int(input("Ingrese un numero para sumar: " ))
+b=int(input("Ingrese ahora otro numero: "))
+def suma(n1,n2):
+  sum=(n2+n1)
+  print("SU SUMA: ",sum)
+suma(a,b)
+
+#Ejercio 3
+a=int(input("Ingrese un numero para resta: " ))
+b=int(input("Ingrese ahora otro numero: "))
+def resta(n1,n2):
+  sum=(n2-n1)
+  print("SU RESTA ES: ",sum)
+resta(a,b)
+
+#Ejercicio 4
+a=int(input("Ingrese un numero para multiplicar: " ))
+b=int(input("Ingrese ahora otro numero: "))
+def multi(n1,n2):
+  mul=(n2*n1)
+  print("SU MULTIPLICION ES: ", mul)
+multi(a,b)
+
+#Ejercicio 5
+a=int(input("Ingrese un numero para dividir: " ))
+b=int(input("Ingrese ahora otro numero: "))
+
+def divi(n1,n2):
+  if n1==0:
+    print("No sea webon no se puede dividir por cer -_-")
+  else:
+    div=(n1/n2)
+    print("SU DIVISION ES: ", div)
+divi(a,b)
+''' 
+a=float(input("Ingrese numero para operar: "))
+b=float(input("Ingrese otro numero para operar: "))
+Menu=int(input("Este es su menu de operaciones, 1 para suma, 2 para resta, 3 para multiplicion y 4 para dividir, eliga que quiere socio: "))
+def suma(n1,n2):
+  sum=(n2+n1)
+  print("SU SUMA: ",sum)
+def resta(n1,n2):
+  rest=(n2-n1)
+  print("SU RESTA ES: ",rest)
+def multi(n1,n2):
+  mul=(n2*n1)
+  print("SU MULTIPLICION ES: ", mul)
+def divi(n1,n2):
+  if n1==0:
+    print("No sea webon no se puede dividir por cer -_-")
+  else:
+    div=(n1/n2)
+    print("SU DIVISION ES: ", div)
+if Menu==1:
+  suma(a,b)
+elif Menu==2:
+  resta(a,b)
+elif Menu==3:
+  multi(a,b)
+elif Menu==4:
+  divi(a,b)
