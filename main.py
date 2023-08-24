@@ -238,6 +238,7 @@ def multi(n1,n2):
   print("SU MULTIPLICION ES: ", mul)
 multi(a,b)
 
+
 #Ejercicio 5
 a=int(input("Ingrese un numero para dividir: " ))
 b=int(input("Ingrese ahora otro numero: "))
@@ -249,7 +250,7 @@ def divi(n1,n2):
     div=(n1/n2)
     print("SU DIVISION ES: ", div)
 divi(a,b)
-''' 
+
 a=float(input("Ingrese numero para operar: "))
 b=float(input("Ingrese otro numero para operar: "))
 Menu=int(input("Este es su menu de operaciones, 1 para suma, 2 para resta, 3 para multiplicion y 4 para dividir, eliga que quiere socio: "))
@@ -267,7 +268,7 @@ def divi(n1,n2):
     print("No sea webon no se puede dividir por cer -_-")
   else:
     div=(n1/n2)
-    print("SU DIVISION ES: ", div)
+    print("SU DIVISION ES: ", round(div,2))
 if Menu==1:
   suma(a,b)
 elif Menu==2:
@@ -276,3 +277,93 @@ elif Menu==3:
   multi(a,b)
 elif Menu==4:
   divi(a,b)
+  
+  
+#EJERCICIO 6
+def interses(inv):
+  d=inv
+
+  if (d>0 and d<1000000):
+    return 2
+  elif (d>=1000000 and d<20000000):
+    return 5
+  else:
+    return 7 
+
+def balance(int, inv):
+  i=int
+  p=inv
+
+  return round((p*(1+(i/100))),2)
+
+def ahorro():
+  #inversion, intereses, b1, b2, b3 = 0.0
+
+  inversion= float(input("Ingrese a la platica que va invertir: "))
+
+  intereses=interses(inversion)
+
+  b1=balance(intereses, inversion)
+  b2=balance(intereses, b1)
+  b3=balance(intereses, b2)
+
+  print("El primer año gano una platita de: ",b1 ,"En el segundo año gano una platica de: ", b2 ,"Ya para el tercer año gano una platita de ", b3)
+
+
+ahorro()
+'''
+
+#EJERCICIOS DE FUNCIONES
+#EJERCICIO 1
+
+def triangulo ():
+  a=float(input("Ingrese la altura del triangulo: "))
+  b=float(input("Ingrese la base: "))
+  At=(a*b)/2
+  print("El area del triangulo es: "+str(At))
+
+def cuadrado ():
+  c=float(input("Ingrese un lado: "))
+  d=float(input("Ingrese el siguiente lado: "))
+  AC=c*d
+  print("El area del cuadrado es: " + str(AC))
+
+def circulo ():
+  Pi=3.14169
+  r=float(input("Ingrese el radio del circulo: "))
+  AO=Pi*(r)**2
+  print("El area del circulo es: " + str(AO))
+
+def pentagono():
+  perimetro=float(input("Cual es el perimetro del pentagono: "))
+  apotema=float(input("Ingrese la apotema: "))
+  AP=(perimetro*apotema)/2  
+  print("Area de el pantagono es: " + str(AP))
+
+def rombo():
+  DiagonalM=float(input("Ingrese la diagonal mayor: "))
+  Diagonalm=float(input("Ingrese la diagonal menor: "))
+  AR: (DiagonalM * Diagonalm)/2
+  print("El area del rombo es: " + str(AR))
+  
+def AreasFIG ():
+  Eleccion=int(input("""Que area desea sacar : 
+                     1) Triangulo
+                     2) Cuadrado
+                     3) Circulo 
+                     4) Pentagono
+                     5) Rombo
+                     : """))
+  if Eleccion==1:
+    triangulo()
+  elif Eleccion==2:
+    cuadrado()
+  elif Eleccion==3:
+    circulo()
+  elif Eleccion==4:
+    pentagono()
+  elif Eleccion==5:
+    rombo()
+AreasFIG()         
+
+        
