@@ -311,7 +311,7 @@ def ahorro():
 
 
 ahorro()
-'''
+
 
 #EJERCICIOS DE FUNCIONES
 #EJERCICIO 1
@@ -343,7 +343,7 @@ def pentagono():
 def rombo():
   DiagonalM=float(input("Ingrese la diagonal mayor: "))
   Diagonalm=float(input("Ingrese la diagonal menor: "))
-  AR: (DiagonalM * Diagonalm)/2
+  AR= (DiagonalM * Diagonalm)/2
   print("El area del rombo es: " + str(AR))
   
 def AreasFIG ():
@@ -364,6 +364,50 @@ def AreasFIG ():
     pentagono()
   elif Eleccion==5:
     rombo()
-AreasFIG()         
+AreasFIG()      
 
-        
+ 
+def maximo(a,b):
+  if a>b:
+    return a
+  else:
+    return b
+
+def minimo(a,b):
+  if a<b:
+    return a
+  else:
+    return b
+
+#programa principal
+x=int(input("un numero: "))
+y=int(input("otro numero: "))
+print(maximo(x-3, minimo(x+2, y-5)))
+'''
+#EJercicio 4
+
+def haiyaki (C1):
+    return C1*(0.1)
+
+def naruto (C2):
+    return C2*(0.05)
+    
+
+def Yu (c3):
+  return c3*(0.2)
+
+def homcenter():
+  costo=float(input("A cuanto le sale el equipito mi bro: "))
+  marca=str(input("Es marca NOSY mano?: "))
+
+  if marca=="si":
+    naruto(costo)
+  elif costo>2000000:
+    haiyaki(costo)
+  elif costo:
+    Yu(costo)
+    
+  print("El parlantico le saldra: ",(haiyaki(costo)-naruto(costo)-Yu(costo))+costo)
+
+homcenter()
+  
