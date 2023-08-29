@@ -400,14 +400,33 @@ def homcenter():
   costo=float(input("A cuanto le sale el equipito mi bro: "))
   marca=str(input("Es marca NOSY mano?: "))
 
-  if marca=="si":
-    naruto(costo)
-  elif costo>2000000:
-    haiyaki(costo)
-  elif costo:
-    Yu(costo)
+  if marca=="si" and costo>2000000:
+    print("El paralantico le saldra en ", naruto(costo)-haiyaki(costo)-Yu(costo)+costo)
     
-  print("El parlantico le saldra: ",(haiyaki(costo)-naruto(costo)-Yu(costo))+costo)
+  elif marca=="no" and  costo>2000000:
+    print("El paralantico le saldra en ", haiyaki(costo)-Yu(costo)+costo)
+    
+  elif marca=="si" and costo<2000000:
+     print("El paralantico le saldra en ", naruto(costo)-Yu(costo)+costo)
+
+  elif marca=="no" and costo<2000000:
+     print("El paralantico le saldra en ", Yu(costo)-costo)
+
+  print('''⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀   ⢠⠞⠉⠙⠲⡀⠀
+⠀⠀⠀⣴⠿⠏⠀⠀⠀⠀⠀⠀⢳⡀⠀   ⡏⠀⠀⠀⠀⠀   ⢷
+⠀⠀⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀⠀⠀⠀⠀      ⡇
+⠀⠀⢸⣯⡭⠁⠸⣛⣟⠆⡴⣻⡲⣿⠀⣸⠀⠀Que lo    ⡇
+⠀⠀⣟⣿⡭⠀⠀⠀⠀⠀⢱⠀⠀⣿⠀⢹⠀⠀⠀ disfrute ⡇
+⠀⠀⠙⢿⣯⠄⠀⠀⠀⢀⡀⠀⠀⡿⠀⠀⡇⠀⠀⠀⠀       ⡼
+⠀⠀⠀⠀⠹⣶⠆⠀⠀⠀⠀⠀⡴⠃⠀⠀⠘⠤         ⠞⠀
+⠀⠀⠀⠀⠀⢸⣷⡦⢤⡤⢤⣞⣁⠀⠀⠀⠀⠀⠘⠤.....⠘  ⠀⠀⠀⠀
+⠀⠀⢀⣤⣴⣿⣏⠁⠀⠀⠸⣏⢯⣷⣖⣦⡀⠀⠀⠀⠀⠀⠀
+⢀⣾⣽⣿⣿⣿⣿⠛⢲⣶⣾⢉⡷⣿⣿⠵⣿⠀⠀⠀⠀⠀⠀
+⣼⣿⠍⠉⣿⡭⠉⠙⢺⣇⣼⡏⠀⠀⠀⣄⢸⠀⠀⠀⠀⠀⠀
+⣿⣿⣧⣀⣿.........⣀⣰⣏⣘⣆⣀⠀⠀''')
+    
+  
 
 homcenter()
   
