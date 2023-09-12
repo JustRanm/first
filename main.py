@@ -385,7 +385,7 @@ y=int(input("otro numero: "))
 print(maximo(x-3, minimo(x+2, y-5)))
 '''
 #EJercicio 4
-
+"""
 def haiyaki (C1):
     return C1*(0.1)
 
@@ -401,16 +401,16 @@ def homcenter():
   marca=str(input("Es marca NOSY mano?: "))
 
   if marca=="si" and costo>2000000:
-    print("El paralantico le saldra en ", naruto(costo)-haiyaki(costo)-Yu(costo)+costo)
+    print("El paralantico le saldra en ", naruto(costo)-haiyaki(costo)+Yu(costo)+costo)
     
   elif marca=="no" and  costo>2000000:
-    print("El paralantico le saldra en ", haiyaki(costo)-Yu(costo)+costo)
+    print("El paralantico le saldra en ", haiyaki(costo)+Yu(costo)+costo)
     
   elif marca=="si" and costo<2000000:
-     print("El paralantico le saldra en ", naruto(costo)-Yu(costo)+costo)
+     print("El paralantico le saldra en ", naruto(costo)+Yu(costo)+costo)
 
   elif marca=="no" and costo<2000000:
-     print("El paralantico le saldra en ", Yu(costo)-costo)
+     print("El paralantico le saldra en ", Yu(costo)+costo)
 
   print('''⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀   ⢠⠞⠉⠙⠲⡀⠀
@@ -429,4 +429,85 @@ def homcenter():
   
 
 homcenter()
-  
+
+"""
+'''
+#Ciclos iteractivos, WHILE
+A = 0
+while A < 10:
+  print(A)
+  A = A + 1
+'''
+#Calculadora con ciclos
+"""
+  #Ejercico 1
+def suma():
+  n1=int(input("Ingrese un numero para sumar: " ))
+  n2=int(input("Ingrese ahora otro numero: "))
+  sum=(n2+n1)
+  print("SU SUMA: ",sum)
+
+
+#Ejercio 3
+def resta():
+  n1=int(input("Ingrese un numero para resta: " ))
+  n2=int(input("Ingrese ahora otro numero: "))
+  sum=(n2-n1)
+  print("SU RESTA ES: ",sum)
+
+
+#Ejercicio 4
+def multi():
+  n1 = int(input("Ingrese un numero para multiplicar: " ))
+  n2 = int(input("Ingrese ahora otro numero: "))
+
+  mul = (n2*n1)
+  print("SU MULTIPLICION ES: ", mul)
+
+
+
+#Ejercicio 5
+def divi():
+  n1=  int(input("Ingrese un numero para dividir: " ))
+  n2 = int(input("Ingrese ahora otro numero: "))
+  if n1==0:
+    print("No sea webon no se puede dividir por cer -_-")
+  else:
+    div=(n1/n2)
+    print("SU DIVISION ES: ", div)
+
+def menu():
+   print('''Este es su menu de operaciones, 
+   1) para suma
+   2) para resta 
+   3) para multiplicion
+   4) para dividir  
+   5) si ya no desea operar: ''')
+
+def calculadora():
+  menu()
+  Menu=0
+  while Menu != 5:
+    Menu=int(input("Seleccione lo que desea hacer: "))
+ 
+    if Menu==1:
+      suma()
+    elif Menu==2:
+      resta()
+    elif Menu==3:
+      multi()
+    elif Menu==4:
+      divi()
+    elif Menu==5:
+      print("Gracias por usar nuestro producto :3")
+    else:
+      print("Opcion no establecidad, vuelva a intentar")
+
+calculadora()
+"""
+
+#Ejercicio 2 de ciclos 
+def tiendita():
+  valor = float(input("Ingrese el valor del producto: "))
+  while valor==0:
+    valor1 == valor + 
