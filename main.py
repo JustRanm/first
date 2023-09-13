@@ -506,8 +506,87 @@ def calculadora():
 calculadora()
 """
 
-#Ejercicio 2 de ciclos 
+#Ejercicio 2 de ciclos
+"""
 def tiendita():
-  valor = float(input("Ingrese el valor del producto: "))
-  while valor==0:
-    valor1 == valor + 
+  valor=1
+  suma=0
+  while valor != 0:
+    valor = float(input("Ingrese el valor del producto: "))
+    suma = suma + valor 
+  
+    if valor < 0:
+        print("Valor no valido vuelva a ingresar el valor de la comprar")
+    elif suma > 1000000 and valor==0:
+       suma= suma-(suma*0.1)
+       print("Le valor de su compra es: ",suma)
+      
+    elif valor==0:
+        print("Le valor de su compra es: ",suma)
+       
+tiendita()
+"""
+
+#BUcle FOR
+'''
+for santiago in range(1,5,2):
+  print(santiago)
+'''
+#Ejercicio 1
+"""
+import random
+Random = random.randint(1,100)
+def adivinacion():
+  Eleccion=0
+  while Random!=Eleccion:
+    Eleccion= int(input("Intente adivinar el numero del 1 al 100: "))
+    if Random > Eleccion:
+      print("Es mayor")
+    elif Random < Eleccion:
+      print("Es menor")
+    elif Random == Eleccion:
+      print("Felicitaciones has adivinado")
+
+adivinacion()
+"""
+#Segunda manera de hacer el Ejercio 1
+"""
+import random
+def adivina():
+  numero_secreto = random.randint(1,100)
+  adivinando = False
+
+  while not adivinando:
+    intento = int(input("Adivine el numero: "))
+    if intento == numero_secreto:
+      print("CORRECTO has a adivinado el numero")
+      adivinando = True
+    elif intento < numero_secreto:
+      print("El numero es mayor")
+    else:
+      print("El numero es menor")
+
+adivina()
+"""
+#Ejercicio 2 con for
+'''
+def Tabla_multiplos():
+  numero = int(input("Ingrese un numero para saber su tabla: "))
+  for multi in range(1,11):
+    Tabla = multi*numero
+    print("Su tabla es: ",Tabla)
+Tabla_multiplos()
+'''
+#Ejercicio 3 con FOR Factorial
+
+def calulador_factoriales():
+  Numero = int(input("Ingrese el numero factorial: "))
+  Multiplicar = 1
+  
+  for factorial in range (1,Numero + 1):
+    Multiplicar *= factorial
+    
+
+  print("El resultado es: ",Multiplicar)
+calulador_factoriales()
+  
