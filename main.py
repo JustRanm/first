@@ -578,7 +578,7 @@ def Tabla_multiplos():
 Tabla_multiplos()
 '''
 #Ejercicio 3 con FOR Factorial
-
+'''
 def calulador_factoriales():
   Numero = int(input("Ingrese el numero factorial: "))
   Multiplicar = 1
@@ -589,4 +589,359 @@ def calulador_factoriales():
 
   print("El resultado es: ",Multiplicar)
 calulador_factoriales()
+'''
+
+#Ejercicio de FOR Caracteres
+'''
+def palabras():
+  palabra = str(input("Ingrese una palabra mi pana: "))
+  for npalabras in palabra:
+    print(npalabras)
+
+palabras()
+  '''
+
+#Ejercicio 5 Excirce 1 con 5 intenetos
+'''
+import random
+def adivina():
+  numero_secreto = random.randint(1,100)
+  adivinando = False
+  intentos = 0
+
+  while not adivinando and intentos < 5:
+    intento = int(input("Adivine el numero: "))
+    intentos += 1
+    if intento == numero_secreto:
+      print("CORRECTO has a adivinado el numero")
+      adivinando = True
+    elif intento < numero_secreto:
+      print("El numero es mayor")
+    else:
+      print("El numero es menor")
+
+  if intentos == 5:
+   print("No has logrado la mision, el numero era ",(numero_secreto),"Vuelva a interar soldad@")
+
+
+adivina()
+'''
+
+#Ejercicio de listas
+"""
+lista=["Boa","Piton","Culebra venosa","1"] 
+lista.append("Holi")
+l = lista.index("Piton")
+l3 = lista.pop("1")
+print(lista)
+"""
+
+#Ejercicio 1
+"""
+def lista():
+  list = []
+  listaa = []
+  for owo in range(1,6):
+    list.append(input("Escriba lo que se le de la gana: "))
+
+  listaa = list
+  listaa.reverse()
+    
+  for i in listaa:
+   print(i)
+lista()
+"""
+
+#Ejercicio 2
+"""
+def aleatorio_potencias():
+  import random
+  lista = []
+  listaa = []
+  for i in range(1,11):
+    lista.append(random.randint(1,10))
+    lista.sort()
+  for Numero in lista:
+    print("El numero ",Numero,"Al cuadrado da: ",Numero**2,"y al cubo:",Numero**3)
+
+
+aleatorio_potencias()
+    """
+
+#Ejercicio 4
+"""
+def notas():
+  lista_notas = []
+  Listaa_notas = []
+
+  for i in range(1,6):
+    lista_notas.append(input("Ingrese la nota del estudiante: "))
+    Listaa_notas = lista_notas
+
+  
+  for nota in Listaa_notas:
+    suma=sum(int(nota))
+    print("Todas sus notas son ", nota, "el promedio de sus notas es: ",suma/5,"su nota maxima es: ",max(nota),"finalmente su menor nota es: ",min(nota))
+  
+notas()
+"""
+#Ejercico 1 listas 27 septiembre
+"""
+def lista_numeros():
+  lista_N = [1,2,3,4,5,6,7,8,9,10]
+  lista_N.reverse()
+  print(*lista_N, sep=",")
+
+lista_numeros()
+
+def solucion_profe():
+  numero = [1,2,3,4,5,6,7,8,9,10]
+  for i in range(1,11):
+    print(numero[-i], end=",")
+
+solucion_profe()
+"""
+#Ejercicio 2
+"""
+def curso():
+  asignaturas = ["Matematicas", "Fisica", "Quimica", "Historia", "Lengua"]
+
+  for i in range(len(asignaturas)-1, -1, -1):
+    notas = float(input("Ingrese la nota de la materia "+asignaturas[i]+ ":"))
+    if notas >= 3:
+      asignaturas.pop(i)
+  
+  print("Tienes que repertir" + str(asignaturas))
+    
+  
+  
+curso()
+  
+"""
+#Ejercicio 3
+"""
+import string
+
+def lista_abecedario():
+  abecedario= list(string.ascii_lowercase)
+  for i in range(len(abecedario),1,-1):
+    if i % 3 == 0:
+      abecedario.pop(i-1)
+  print("las letras que no estan en posiciones de multiplos de 3 son: " + str(abecedario))
+
+lista_abecedario()
+"""
+#Ejrcico 4 palindrimo 
+"""
+def palindromo():
+  palabra = input("Inserte una palabra: ")
+  palabra =
+  lista = list(palabra)
+  listaa = lista.copy()
+  
+  listaa = palabra.reverse()
+  if lista == listaa:
+    print("Mira, la frase ",palabra," es palidromo ")
+  else:
+      print("No es palidromo :3")
+
+palindromo()
+"""
+#Matrices
+#Ejercicio 1
+'''
+Contactos = []
+Contacto = []
+
+def Menu():
+  Menu = input("""Que desea hacer señor@: 
+  1) Agregar contacto
+  2) Buscar contacto
+  3) Mostrar todos los contactos
+  4) Eliminar contactos
+  5) Salir""")
+
+def Crear_contacto(nombre, numero, correo, contactos):
+  Contacto= [nombre, numero, correo]
+  Contactos.append(Contacto)
+
+def buscar_contacto(nombre,contactos):
+  for Contacto in Contactos:
+    if Contactos[0] == nombre:
+      print(f"Nombre {Contactos[0]} numero {Contactos[1]} contacto {Contactos[2]}")
+    else: 
+      print("Contacto no encontrado")
+
+def mostrar_contactos():
+  print(Contactos)
+
+def eliminar_contactos(nombre,contactos):
+  for Contacto in Contactos:
+    if nombre == Contacto[0]:
+       Contactos.pop(Contactos.index(Contacto))
+    else:
+      print("Contacto no encontrado")
+
+def Lista_de_contactos():
+  while True:
+     Menu()
+     eleccion = input("Ingrese su opcion: ")
+  
+    if eleccion == 1:
+      nombre = input("Ingrese el nombre del contacto ")
+      Numero = input("Ingrese el numero telefonico del contacto ")
+      Correo = input("Ingrese el correo electronico del contacto ")
+      Crear_contacto(nombre, Numero, Correo)
+
+    elif eleccion == 2:
+      nombre = input("Que contacto desea buscar: ")
+       buscar_contacto(nombre)
+
+    elif eleccion == 3:
+      mostrar_contactos()
+
+
+
+    elif eleccion == 5:
+      False 
+
+Lista_de_contactos()
+
+'''
+#Ejercicio 2
+'''
+import random
+def   Cartas():
+
+  Pica = ["Pica","Diamante","Trebol","Corazon"]
+  Valor = ["2","3","4","5","6","7","8","9","A","J","Q","K"]
+  Mazo = []
+
+  for Palo in Pica: 
+    for valor in Valor:
+      carta = [valor, Palo]
+      Mazo.append(carta)
+
+  random.shuffle(Mazo)
+  return Mazo
+ 
+
+def Barajado():
+  mazo = Cartas()
+  jugadores = int(input("Ingrese el numero de jugadores"))
+  cartas = int(input("Ingrese el numero de jugadores"))
+  N_juagors = [[] for _ in range(jugadores)]
+  for _ in range(cartas):
+    for jugador in  jugadores:
+      cartas = mazo.pop()
+      jugador.append(carta)
+
+  for i,jugador in enumetate(N_juagors):
+    print(f"Jugador {i+1}: {jugador}")
+    
+
+Barajado()
+
+'''
+
+#Ejercicio 1 clase del 4/10/2023
+'''
+def crear_cuenta(Producto_vendido, cantidad, precio, ventas):
+  venta = [Producto_vendido, cantidad, precio ]  
+  ventas.append(venta)
+
+def menu():
+  print("""Lista de ventas
+  1) Agregar ventas
+  2) Mostrar lista de ventas del dia
+  3) Calcular total de ventas
+  4) Salir""")
+
+
+
+def tiendita():
+  ventas = []
+  menu()
+
+  while True: 
+    eleccion = int(input("¿Que decide hacer panita?: "))
+    if eleccion == 1:
+      Producto_vendido = str(input("Que producto  vendio: "))
+      Cantidad = float(input("Que cantidad vendio de ese producto: "))
+      Precio = float(input("Cual es el precio de ese producto: "))
+      crear_cuenta(Producto_vendido, Cantidad, Precio, ventas)
+
+    elif eleccion == 2:
+      print("Las listas de ventas son: ", ventas)
+
+    elif eleccion == 3:
+      Total_ventas = sum(venta[1] * venta[2] for venta in ventas)
+      print(f"Su total de ventas son ${Total_ventas} ")
+
+    elif eleccion == 4:
+      break
+
+tiendita()
+        
+'''
+#Ejercicio 2
+'''
+def suma_de_matrices(m1,m2):
+  resultado= []
+  for i in range(len(m1)):
+    fila = []
+    for j in range(len(m1[i])):
+      suma = m1[i][j] + m2[i][j]
+      fila.append(suma)
+    resultado.append(fila)
+  return resultado
+
+m4 = [[1, 2, 3], [2, 4, 5], [5, 6, 7]]
+m5 = [[8, 4, 6], [3, 8, 9], [8, 1, 6]]
+
+YU_chen = suma_de_matrices(m4,m5)
+print(YU_chen)
+'''
+#Ejercicio 3
+
+'''
+def matriz_transpuesta(matris):
+  matriz_transpuesta = []
+  fila = len(matris)
+  columna = len(matris[0])
+
+  for columnas in range(columna):
+    Nueva_fila = []
+    for filas in range(fila):
+       Nueva_fila.append(matris[filas][columnas])
+    matriz_transpuesta.append(Nueva_fila)
+  return matriz_transpuesta
+
+
+matris = [[1, 2, 3], [2, 4, 5], [5, 6, 7]]
+Matriz_transouesta = matriz_transpuesta(matris)
+print(Matriz_transouesta)
+'''
+
+def multiplicacion_matrices(m1,m2):
+    
+  resultado= []
+  for i in range(len(m1)):
+    fila = []
+    for j in range(len(m2[0])):
+      suma = 0
+      for k in range(len(m2)):
+          suma += m1[i][k] * m2[k][j]
+      fila.append(suma)
+    resultado.append(fila)
+  return resultado
+  
+m4 = [[1, 2, 3], [2, 4, 5], [5, 6, 7]]
+m5 = [[8, 4, 6], [3, 8, 9], [8, 1, 6]]
+resultado = multiplicacion_matrices(m4,m5)
+print(resultado)
+      
+
+
+
   
