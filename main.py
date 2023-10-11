@@ -601,7 +601,7 @@ def palabras():
 palabras()
   '''
 
-#Ejercicio 5 Excirce 1 con 5 intenetos
+#Ejercicio 5 Excrce 1 con 5 intenetos
 '''
 import random
 def adivina():
@@ -922,7 +922,7 @@ matris = [[1, 2, 3], [2, 4, 5], [5, 6, 7]]
 Matriz_transouesta = matriz_transpuesta(matris)
 print(Matriz_transouesta)
 '''
-
+'''
 def multiplicacion_matrices(m1,m2):
     
   resultado= []
@@ -936,12 +936,114 @@ def multiplicacion_matrices(m1,m2):
     resultado.append(fila)
   return resultado
   
-m4 = [[1, 2, 3], [2, 4, 5], [5, 6, 7]]
-m5 = [[8, 4, 6], [3, 8, 9], [8, 1, 6]]
+m4 = [[1, 2], [3, 4]]
+m5 = [[5, 6 ], [7, 8]]
 resultado = multiplicacion_matrices(m4,m5)
 print(resultado)
+'''
+#Ejercico de diccionarios
+'''
+def monedas():
+  Monedas = {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}
+  
+  verdad = False
+  while not verdad:
+    Eleccion = str(input("Que moneda desea ver el simbolo "))
+    eleccion = Eleccion.lower()
+    if eleccion == "euro":
+       print(Monedas["Euro"])
+    elif eleccion == "dollar":
+        print(Monedas["Dollar"])
+    elif eleccion == "yen":
+        print(Monedas["Yen"])
+    elif eleccion == "salir":
+      print("Muchas graciaso por hacer uso ")
+      verdad = True
+    else:
+      print("Esa moneda no esta disponible")
+    verdad = False
+
+
+
+def divisas_profe():
+  Monedas = {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}
+  Eleccion = str(input("Que moneda desea ver el simbolo "))
+  eleccion = Eleccion.lower()
+  if eleccion.title() in Monedas:
+    print(Monedas[eleccion.title()])
+  else: 
+    print("Divisa no disponible")
+
+monedas()
+'''
+# Ejercicio Diccionarios con claves
+'''
+
+def Creador_diccionario():
+  Llaves = {}
+  Numero = int(input("Ingrese el numero de diccionarios quiere creer: "))
+  for i in range(Numero+1):
+    Llaves = {i:i**2}
+
+    print(Llaves)
+  
+Creador_diccionario()
+
+def soluccion_del_profe():
+  numero = int(input("Dime un numero: "))
+  cuadrados = {}
+
+  for num in range(1,numero+1):
+    cuadrados[num] = num**2
+  for num,valor in cuadrados.items():
+    print("%s -> %s" % (num,valor))
+      #Darle formato a la imprension 
+
+'''
+#Ejercicio Cadena y devuelva diccionario
+'''
+def lecto_cadenas():
+  diccionario_de_cadenas = {}
+  cadena_de_texto = input("Ingrese una cadena: ")
+
+  for letra in cadena_de_texto:
+    if letra in diccionario_de_cadenas:
+      diccionario_de_cadenas[letra] += 1
+    else:
+      diccionario_de_cadenas[letra] = 1
+  print(diccionario_de_cadenas)
+    
+  '''
+#Ejercicio #4
+'''
+def Datos_personales_Yuchen_es_PUTO():
+  Datos = {}
+  Datos["Nombre"] = input("Ingrese su nombre: ")
+  Datos["Edad"] = int(input("Ingrese su edad: "))
+  Datos["Telefono"] = int(input("Ingrese su contacto telefonico socio: "))
+  Datos["Vive"] = input("Ingrese su direccion panita: ")
+
+  for i in Datos.items():
+    print("%s -> %s" % i)
+
+Datos_personales_Yuchen_es_PUTO()
+'''
+#Ejercicio 5 
+def tiendita():
+  tiendita = {"platano" : 1.35, "manzana" : 0.8, "pera" : 0.85, "naranaja": 0.7 }
+  Fruta = input("Ingrese la fruta que desea comprar: ")
+  Kilos = float(input("Ingrese los kilos de la fruta panita: "))
+  fruta = Fruta.lower()
+  for i in tiendita:
+    if i == fruta :
+      multiplicacion = tiendita[i] * Kilos
+      print(f'El precio de la {fruta} es:  ${multiplicacion}')
+      break
+    else:
+      print("La fruta no se encuentra bro")
+      break
       
+    
 
-
-
+tiendita()
   
